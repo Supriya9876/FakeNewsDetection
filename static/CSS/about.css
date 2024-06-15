@@ -1,0 +1,29 @@
+main {
+  margin-top: 6vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.first-section {
+  margin-left: 10vw;
+  margin-right: 12vw;
+}
+.first-section h1 {
+  font-size: 4.5vw;
+  line-height: 11vh;
+  color: #20bc7e;
+}
+.first-section p {
+  margin-top: 3vh;
+  font-size: large;
+}
+
+.second-section {
+  height: 90vh;
+}
+
+.second-section img[alt="project_team_img"] {
+  width: 40vw;
+  height: 50vh;
+  margin: 16vh 8vw 0vw -6vw;
+}

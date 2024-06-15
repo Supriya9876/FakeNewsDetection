@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{{url_for('static',
+    filename='/Assets/favicon.svg')}}"
+    />
+    <!-- Link the CSS style sheet -->
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='/CSS/nav.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='/CSS/result.css')}}"
+    />
+
+    <!-- adding the google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400;500;600;700&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Title -->
+    <title>Result-Fake News Detection</title>
+  </head>
+  <body id="body" value={{dic["search_query"]}}>
+    <header>
+      <nav>
+        <a href="/"
+          ><img
+            src="{{url_for('static', filename='/Assets/hexa_trivers_logo.png')}}"
+            alt="logo"
+        /></a>
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/prediction">Prediction</a>
+          </li>
+          <li>
+            <a href="/search_news">Search News</a>
+          </li>
+          <li>
+            <a href="/about">About Us</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main-result">
+      <h1>Prediction Result</h1>
+      <div class="news-container">
+        <span class="headline">
+          <h2 class="title">News Headline :</h2>
+          <p class="desc1">{{dic["text"]}}</p></span
+        >
+
+        <span class="result">
+          <h2 class="title">Result :</h2>
+          {% if dic["model_res"] == 0 %}
+          <p class="desc2" style="color: #0cf40c">The News is Real.</p>
+          {% else %}
+          <p class="desc2" style="color: red">The News is Fake.</p>
+          {% endif %}
+        </span>
+      </div>
+    </main>
+
+    <section class="article" id="article">
+      <h1>Related News Articles</h1>
+      <main>
+        <div class="cards-container container flex" id="cards-container">No News Found</div>
+      </main>
+
+      <template id="template-news-card">
+        <div class="card">
+          <div class="card-header">
+            <img
+              src="https://via.placeholder.com/400x200"
+              alt="news-image"
+              id="news-img"
+            />
+          </div>
+          <div class="card-content">
+            <h3 id="news-title">This is the Title</h3>
+            <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+            <p class="news-desc" id="news-desc">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Recusandae saepe quis voluptatum quisquam vitae doloremque facilis
+              molestias quae ratione cumque!
+            </p>
+          </div>
+        </div>
+      </template>
+    </section>
+
+    <script src="{{url_for('static', filename='/JS/result.js')}}"></script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+body {
+  background-color: #f0f4f5;
+}
+
+header {
+  background-color: #f3faff;
+  box-shadow: 0 0 4px #bbd0e2;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  left: 0;
+  right: 0;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  margin: auto 10vw;
+}
+nav img {
+  cursor: pointer;
+  height: 9vh;
+  width: 13vw;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 5vw;
+}
+nav ul li {
+  list-style: none;
+  /* font-size: medium; */
+  cursor: pointer;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #20bc7e;
+  font-weight: 600;
+}
+nav ul li a:hover {
+  font-weight: 800;
+  font-weight: bold;
+  color: #179150;
+}

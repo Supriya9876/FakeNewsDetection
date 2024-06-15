@@ -1,0 +1,45 @@
+main {
+  /* height: 90vh; */
+  margin-top: 5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.first-section {
+  margin-left: 10vw;
+  margin-right: 12vw;
+}
+.first-section h1 {
+  font-size: 4.5vw;
+  line-height: 11vh;
+  color: #20bc7e;
+}
+.first-section p {
+  margin-top: 3vh;
+  font-size: large;
+}
+.first-section button {
+  cursor: pointer;
+  margin-top: 6vh;
+  width: 15vw;
+  height: 5vh;
+  border-radius: 15px;
+  border: none;
+  background-color: #20bc7e;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.2vw;
+}
+
+.first-section button:hover {
+  background-color: #179150;
+}
+.second-section {
+  height: 90vh;
+}
+
+.second-section img[alt="fake_img"] {
+  width: 40vw;
+  height: 50vh;
+  margin: 12vh 5vw 0 -10vw;
+}

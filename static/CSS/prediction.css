@@ -1,0 +1,66 @@
+.main-outer {
+  margin-top: 20vh;
+  width: 98vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inner-section1 h1 {
+  text-align: center;
+  font-size: 2.5vw;
+  color: #20bc7e;
+  margin-bottom: 2.5vh;
+  font-weight: 700;
+}
+
+.main-outer .inner-section1 .description {
+  width: 48vw;
+  text-align: center;
+  margin-bottom: 10vh;
+  color: #000000;
+  font-weight: 500;
+}
+
+.inner-section2 form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inner-section2 form label {
+  font-size: 1.5vw;
+  color: #20bc7e;
+  font-weight: 700;
+}
+
+.inner-section2 form #newsHeadline {
+  width: 48vw;
+  height: 60px;
+  margin-top: -1vh;
+  border: 2px solid #20bc7e;
+  border-radius: 5px;
+  font-size: 2vh;
+  font-weight: 400;
+}
+
+.inner-section2 form #newsHeadline:hover {
+  border: 3px solid #1ba06b;
+}
+
+.inner-section2 button {
+  cursor: pointer;
+  margin-top: 2vh;
+  width: 12vw;
+  height: 5vh;
+  border-radius: 15px;
+  border: none;
+  background-color: #20bc7e;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.2vw;
+}
+
+.inner-section2 button:hover {
+  background-color: #179150;
+}

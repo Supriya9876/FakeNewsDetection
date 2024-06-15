@@ -1,0 +1,44 @@
+{% extends 'base.html' %} {% block title %}About{% endblock title %} {% block
+link %}
+<link rel="stylesheet" href="{{url_for('static', filename='/CSS/nav.css')}}" />
+<link
+  rel="stylesheet"
+  href="{{url_for('static', filename='/CSS/about.css')}}"
+/>
+{% endblock link %} {% block main %}
+<main>
+  <section class="first-section">
+    <h1>About Us</h1>
+    <p>
+      We are a group of six passionate final-year B.Tech students specializing
+      in Computer Science and Engineering. As part of our final year project, we
+      have embarked on a mission to address the growing problem of
+      misinformation through our project, "Fake News Detection using Machine
+      Learning." Our team is dedicated to leveraging our technical skills and
+      knowledge in machine learning to develop a reliable system that can
+      accurately differentiate between fake and real news. With the rise of
+      digital media, the spread of false information has become a critical
+      issue, and we believe our project can contribute to mitigating this
+      problem. Throughout our academic journey, we have gained extensive
+      experience in various aspects of computer science, including data
+      analysis, algorithm development, and software engineering. This project is
+      the culmination of our studies, combining our expertise and collaborative
+      efforts to create a meaningful and impactful tool.<br /><br />
+      <strong
+        ><i>
+          Thank you for visiting, and we hope you find our tools and resources
+          helpful in the fight against fake news.</i
+        ></strong
+      >
+    </p>
+  </section>
+
+  <section class="second-section">
+    <img
+      src="{{url_for('static', filename='/Assets/member_img.png')}}"
+      alt="project_team_img"
+    />
+  </section>
+</main>
+
+{% endblock main %}

@@ -1,0 +1,34 @@
+{% extends 'base.html' %} {% block title %}Prediction{% endblock title %} {%
+block link %}
+<link rel="stylesheet" href="{{url_for('static', filename='/CSS/nav.css')}}" />
+<link
+  rel="stylesheet"
+  href="{{url_for('static', filename='/CSS/prediction.css')}}"
+/>
+{% endblock link %} {% block main %}
+<main class="main-outer">
+  <div class="inner-section1">
+    <h1>Fake News Detector</h1>
+    <p class="description">
+      Welcome to Fake News Detection! Enter a news headline or article headline
+      to predict whether the news is fake or real. Then, click the "Get Result"
+      button to be redirected to another page where you'll receive the
+      prediction result. We hope you find this tool useful. Thank you!
+    </p>
+  </div>
+  <div class="inner-section2">
+    <form action="/prediction" method="POST">
+      <label for="newsHeadline">Enter News Headline</label><br />
+      <textarea
+        type="text"
+        name="newsHeadline"
+        id="newsHeadline"
+        placeholder="Enter news headline to check news is real or fake."
+      ></textarea
+      ><br />
+      <button type="submit" class="btn">Get Result</button>
+    </form>
+  </div>
+</main>
+
+{% endblock main %}
